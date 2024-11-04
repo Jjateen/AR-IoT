@@ -7,6 +7,7 @@ Welcome to **AR-IoT**, an innovative project that bridges the world of Augmented
 - [Features](#features)
 - [Technology Stack](#technology-stack)
 - [Setup Instructions](#setup-instructions)
+- [Script Descriptions](#script-descriptions)
 - [Project Structure](#project-structure)
 - [Future Work](#future-work)
 - [Demo](#demo)
@@ -61,6 +62,22 @@ Welcome to **AR-IoT**, an innovative project that bridges the world of Augmented
 - Point the device at the target plane to view and interact with virtual buttons.
 - Use the Blynk web dashboard or mobile app to monitor and control the ESP32.
 
+## Script Descriptions
+### Arduino Sketch
+- **blynk2_Esp32_test.ino**: This script runs on the ESP32 and connects it to a WiFi network and the Blynk cloud. It uses a DHT11 sensor to measure temperature and humidity, sends the readings to the Blynk app, and toggles an LED on and off using Blynk virtual pins.
+
+### Unity C# Scripts
+- **click.cs** (located in `Sensor App/Assets/`):
+  - Manages the behavior of virtual buttons in the Unity AR app.
+  - Uses Vuforia’s `VirtualButtonBehaviour` to trigger events when a virtual button is pressed.
+  - Retrieves temperature and humidity data from the Blynk cloud using Unity’s `UnityWebRequest`.
+  - Updates `InputField` UI components with the sensor data.
+
+- **First.cs** (located in `Virtual Buttons App/Assets/`):
+  - Handles the functionality of two virtual buttons in the Unity AR app.
+  - `Vb_on` turns an LED on, and `Vb_off` turns it off by sending HTTP GET requests to the Blynk cloud.
+  - Uses Vuforia’s `VirtualButtonBehaviour` to detect button presses and logs the status of the LED.
+
 ## Project Structure
 ```
 AR-IoT/
@@ -96,6 +113,8 @@ AR-IoT/
 ## Demo
 Check out the project in action:
 
-![AR-IoT Demo](demo_video.mp4)
+[AR-IoT Demo Video](https://www.linkedin.com/posts/jjateen_augmentedreality-vuforia-unity-activity-7068212600731222017-pRAD?utm_source=share&utm_medium=member_desktop)
 
 ---
+
+Feel free to explore the project and be inspired by the way AR technology can transform IoT experiences!
