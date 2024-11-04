@@ -27,7 +27,7 @@ Welcome to **AR-IoT**, an innovative project that bridges the world of Augmented
 - **User-Friendly Design**: Simple and intuitive interface for non-technical users to interact with IoT devices.
 
 ## Technology Stack
-- **Hardware**: ESP32, DHT11 sensor
+- **Hardware**: ESP32, DHT11 sensor, Relay, AC Bulb
 - **Software**:
   - **Unity**: For building the AR interface
   - **Vuforia**: For target tracking and virtual button integration
